@@ -1,2 +1,2 @@
 # ParseSequencing
-Usefull lines for parsing of nanopore sequencing reads (fastq, fasta, maf)
+Useful lines for parsing of nanopore sequencing reads (fastq, fasta, maf)
