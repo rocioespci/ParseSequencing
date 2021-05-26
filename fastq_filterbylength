@@ -1,0 +1,6 @@
+	
+  ## Parse a fastq file to filter sequences by length
+  ## Input fastq -> output fastq
+  ## Need to specigy LMIN LMAX INPUT OUTPUT
+  
+  awk 'NR % 4 ==2 && length($0) > LMIN && length($0) <LMAX {print f  "\n" $0;getline;print;getline;print}  {f=$0}' 		INPUT.fastq > OUTPUT.fastq
