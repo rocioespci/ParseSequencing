@@ -2,7 +2,7 @@
 ## Search for a fix pattern inside the sequences of a fastq file (I use it to detect barcodes). 
 ## In this case it saves a txt with the name of the sequence, the line number and the pattern detected
 ## Input fastq  Output txt
-## Need to specigy PATTERN INPUT and OUTPUT
+## Need to specify PATTERN INPUT and OUTPUT
 
 awk 'NR%4==2 && match($0,/PATTERN/) {print a " " NR "  " substr($0,RSTART,RLENGTH)} {a=$0}' INPUT.fastq >> OUTPUT.txt
 
